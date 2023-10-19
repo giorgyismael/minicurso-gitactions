@@ -14,10 +14,8 @@ jobs:
     steps:
       - name: Print value
         run: | 
-          echo Iniciando Build
-          echo Branch ${{ github.ref_name }}
-          echo Evento ${{ github.event_name }}
-          echo Ambiente ${{ env.environment }}
+          echo Iniciando Build...
+          echo Branch utilizada ${{ github.ref_name }}, Evento ${{ github.event_name }}.
       
       - name: Checkout Repositorio
         uses: actions/checkout@v3
@@ -30,5 +28,5 @@ jobs:
           cache: maven
           
       - name: Build with Maven
-        run: mvn -B clean install
+        run: mvn -B clean package
 
