@@ -15,6 +15,6 @@ jobs:
       - name: Print value
         run: | 
           echo Iniciando Build
-          echo Branch ${{ branch github.ref_name }}
-          echo Gatilho ${{ github.ref_name }}
+          echo Branch ${{ github.ref_name }}
+          echo Evento ${{ github.event_name }}
 
