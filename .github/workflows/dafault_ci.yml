@@ -1,4 +1,4 @@
-name: CI
+name: Meu primeiro CI
 on:
 
   push:
