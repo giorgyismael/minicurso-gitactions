@@ -33,7 +33,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B clean compile -DskipTests
   test:
-    needs: build
+    needs: compile
     runs-on: ubuntu-latest
     steps:
       - name: Test
@@ -52,7 +52,7 @@ jobs:
       - name: Executar Testes
         run: mvn clean test
   build:
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Build
