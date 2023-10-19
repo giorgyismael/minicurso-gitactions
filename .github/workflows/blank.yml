@@ -29,11 +29,5 @@ jobs:
           cache: maven
       - name: Maven Clean
         run: mvn clean
-      
-      - name: Maven Compile
-        run: mvn compile
-      
-      - name: Maven Compile
-        run: mvn compile
 
 
