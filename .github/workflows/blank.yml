@@ -50,7 +50,7 @@ jobs:
           cache: maven
           
       - name: Executar Clean e Verify
-        run: mvn clean verify
+        run: mvn clean
       
       - name: Executar Testes
         run: mvn test
