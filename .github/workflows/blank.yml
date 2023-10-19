@@ -13,4 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print value
-        run: echo ${{ env.environment }}
+        run: | 
+             echo Iniciando Build 
+             echo Branch ${{ branch github.ref_name }}
+             echo Gatilho ${{ github.ref_name }}
