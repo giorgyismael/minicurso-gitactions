@@ -33,6 +33,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B clean package
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Test
