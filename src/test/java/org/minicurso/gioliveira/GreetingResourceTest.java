@@ -17,5 +17,12 @@ public class GreetingResourceTest {
              .statusCode(200)
              .body(is("Hello from RESTEasy Reactive"));
     }
+    @Test
+    public void testForceFailHelloEndpoint() {
+        given()
+          .when().get("/hello")
+          .then()
+             .statusCode(404);
+    }
 
 }
